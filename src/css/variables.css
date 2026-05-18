@@ -1,0 +1,28 @@
+﻿:root {
+  /* Colors */
+  --color-primary: #23B8CC;
+  --color-bg: #0A0A0A;
+  --color-text: #F5F5F0;
+  --color-muted: #BFBFB8;
+
+  /* Typography */
+  --font-display: 'Sora', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-mono: 'Courier New', 'Lucida Console', monospace;
+
+  /* Spacing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body), 'DM Sans', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,0 +1,311 @@
+/* =============================================
+   ENTER STATES — hidden before animate-in
+   ============================================= */
+[data-animate="hero"] {
+  opacity: 0;
+  transform: translateY(40px) scale(0.97);
+  transition: opacity 1s cubic-bezier(0.4,0,0.2,1),
+              transform 1s cubic-bezier(0.4,0,0.2,1);
+}
+[data-animate="fade-up"] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1),
+              transform 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+[data-animate="scroll-up"] {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1),
+              transform 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+[data-animate="scroll-left"] {
+  opacity: 0;
+  transform: translateX(-44px);
+  transition: opacity 0.75s cubic-bezier(0.4,0,0.2,1),
+              transform 0.75s cubic-bezier(0.4,0,0.2,1);
+}
+[data-animate="scroll-right"] {
+  opacity: 0;
+  transform: translateX(44px);
+  transition: opacity 0.75s cubic-bezier(0.4,0,0.2,1),
+              transform 0.75s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ANIMATED IN */
+[data-animate].animate-in {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* STAGGER DELAYS */
+[data-delay="0.1"] { transition-delay: 0.1s }
+[data-delay="0.2"] { transition-delay: 0.2s }
+[data-delay="0.3"] { transition-delay: 0.3s }
+[data-delay="0.4"] { transition-delay: 0.4s }
+[data-delay="0.5"] { transition-delay: 0.5s }
+[data-delay="0.6"] { transition-delay: 0.6s }
+[data-delay="0.7"] { transition-delay: 0.7s }
+[data-delay="0.8"] { transition-delay: 0.8s }
+[data-delay="0.9"] { transition-delay: 0.9s }
+[data-delay="1"]   { transition-delay: 1s }
+[data-delay="1.2"] { transition-delay: 1.2s }
+
+/* =============================================
+   SCROLL WORDS
+   ============================================= */
+.scroll-word {
+  display: inline-block;
+  opacity: 0.15;
+  transition: opacity 0.35s ease;
+}
+.scroll-word.word-lit {
+  opacity: 1;
+}
+
+/* =============================================
+   NAV LINK — animated underline
+   ============================================= */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #23B8CC;
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* =============================================
+   CTA BUTTON
+   ============================================= */
+.cta-btn {
+  transition: all 0.35s cubic-bezier(0.4,0,0.2,1) !important;
+}
+.cta-btn:hover {
+  filter: brightness(1.12) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 0 42px rgba(35,184,204,0.45) !important;
+}
+.cta-btn:active {
+  transform: translateY(0) !important;
+  filter: brightness(1) !important;
+}
+
+/* =============================================
+   GLASS CARDS
+   ============================================= */
+.glass-card {
+  cursor: default;
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1),
+              box-shadow 0.35s cubic-bezier(0.4,0,0.2,1),
+              border-color 0.35s cubic-bezier(0.4,0,0.2,1) !important;
+}
+.glass-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1),
+              0 16px 52px rgba(0,0,0,0.35),
+              0 0 36px rgba(35,184,204,0.1) !important;
+  border-color: rgba(35,184,204,0.25) !important;
+}
+
+/* =============================================
+   WORK IMAGE — hover overlay + zoom
+   ============================================= */
+.work-img-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.work-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,10,10,0.55);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.work-overlay span {
+  color: #F5F5F0;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.work-img-wrap:hover .work-overlay {
+  opacity: 1;
+}
+.work-img {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.65s cubic-bezier(0.4,0,0.2,1);
+}
+.work-img-wrap:hover .work-img {
+  transform: scale(1.05);
+}
+
+/* =============================================
+   ABOUT PHOTO
+   ============================================= */
+.about-photo {
+  transition: box-shadow 0.5s ease;
+}
+.about-photo:hover {
+  box-shadow: 0 0 64px rgba(35,184,204,0.2);
+}
+
+/* =============================================
+   SCROLL INDICATOR (hero bounce)
+   ============================================= */
+@keyframes scrollBounce {
+  0%, 100% { opacity: 0.4; transform: translateY(0); }
+  50%       { opacity: 1;   transform: translateY(5px); }
+}
+.scroll-indicator {
+  animation: scrollBounce 2.5s ease-in-out infinite;
+}
+
+/* =============================================
+   PROCESS TIMELINE
+   ============================================= */
+.process-step-item {
+  transition: opacity 0.5s ease;
+}
+.process-step-item:not(.active) {
+  opacity: 0.3;
+}
+.process-step-item.active {
+  opacity: 1;
+}
+.process-dot {
+  transition: box-shadow 0.4s ease;
+}
+.process-step-item.active .process-dot {
+  box-shadow: 0 0 16px rgba(35,184,204,0.65) !important;
+}
+
+/* =============================================
+   CONTACT MODAL
+   ============================================= */
+.contact-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10,10,10,0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: max(1.25rem, 5vw);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.contact-modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.contact-modal {
+  background: #111;
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 520px;
+  transform: translateY(22px) scale(0.97);
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.contact-modal-overlay.open .contact-modal {
+  transform: translateY(0) scale(1);
+}
+
+/* FORM INPUTS */
+.form-input {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  color: #F5F5F0;
+  font-size: 0.88rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+.form-input::placeholder { color: #666; }
+.form-input:focus {
+  outline: none;
+  border-color: #23B8CC;
+  background: rgba(35,184,204,0.04);
+}
+textarea.form-input {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* =============================================
+   FOOTER LINKS
+   ============================================= */
+.footer-link {
+  transition: color 0.3s ease;
+}
+.footer-link:hover {
+  color: #F5F5F0 !important;
+}
+
+/* =============================================
+   HERO — ticker pulse + panel sweep
+   ============================================= */
+@keyframes livePulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+.live-pulse { animation: livePulse 1.6s ease-in-out infinite; }
+.live-pulse-d2 { animation: livePulse 1.6s ease-in-out 0.3s infinite; }
+.live-pulse-d3 { animation: livePulse 1.6s ease-in-out 0.6s infinite; }
+.live-pulse-d4 { animation: livePulse 1.6s ease-in-out 0.9s infinite; }
+.live-pulse-d5 { animation: livePulse 1.6s ease-in-out 1.2s infinite; }
+
+@keyframes panelSweep {
+  0%   { transform: translateY(-60px); }
+  100% { transform: translateY(420px); }
+}
+.panel-sweep {
+  position: absolute;
+  left: 0; right: 0;
+  top: 0;
+  height: 60px;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(35,184,204,0.07), transparent);
+  animation: panelSweep 4.5s linear infinite;
+}
+
+/* =============================================
+   REDUCED MOTION OVERRIDE
+   ============================================= */
+@media (prefers-reduced-motion: reduce) {
+  [data-animate],
+  .glass-card,
+  .cta-btn,
+  .work-img,
+  .work-overlay,
+  .contact-modal,
+  .contact-modal-overlay,
+  .scroll-word {
+    transition: none !important;
+    animation: none !important;
+  }
+  [data-animate] { opacity: 1 !important; transform: none !important; }
+  .scroll-word   { opacity: 1 !important; }
+}
