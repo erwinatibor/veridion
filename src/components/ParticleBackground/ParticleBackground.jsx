@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 const PARTICLE_COUNT = 4000;
 const MOUSE_RADIUS   = 100;
 const REPEL_FORCE    = 3.5;
-const BASE_SPEED     = 0.2;
+const BASE_SPEED     = 0.4;
 
 // ── helpers ────────────────────────────────────────────────────────────────
 function shuffle(arr) {
@@ -187,8 +187,8 @@ export default function ParticleBackground() {
         i,
         x:  Math.random() * window.innerWidth,
         y:  Math.random() * window.innerHeight,
-        vx: (Math.random() - 0.5) * BASE_SPEED,
-        vy: (Math.random() - 0.5) * BASE_SPEED,
+        vx: (Math.random() - 0.5) * BASE_SPEED * 2,
+        vy: (Math.random() - 0.5) * BASE_SPEED * 2,
         r:  big ? Math.random() * 1.2 + 0.8 : Math.random() * 0.7 + 0.3,
         op: Math.random() * 0.45 + 0.2,
         sx: 0, sy: 0,
@@ -298,10 +298,10 @@ export default function ParticleBackground() {
             p.vx += (dx / dist) * force * REPEL_FORCE * 0.08;
             p.vy += (dy / dist) * force * REPEL_FORCE * 0.08;
           }
-          p.vx *= 0.985; p.vy *= 0.985;
+          p.vx *= 0.993; p.vy *= 0.993;
           const spd = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
           if (spd > BASE_SPEED * 4) { p.vx = (p.vx / spd) * BASE_SPEED * 4; p.vy = (p.vy / spd) * BASE_SPEED * 4; }
-          if (spd < BASE_SPEED * 0.2 && Math.random() < 0.01) { p.vx += (Math.random() - 0.5) * 0.04; p.vy += (Math.random() - 0.5) * 0.04; }
+          if (spd < BASE_SPEED * 0.5) { p.vx += (Math.random() - 0.5) * 0.12; p.vy += (Math.random() - 0.5) * 0.12; }
           p.x += p.vx; p.y += p.vy;
           if (p.x < 0) p.x = canvas.width;
           if (p.x > canvas.width)  p.x = 0;

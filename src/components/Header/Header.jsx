@@ -49,7 +49,7 @@ export default function Header({ onContactOpen }) {
           gap: 14,
           padding: '9px max(1.25rem, 5vw)',
           borderBottom: '0.5px solid rgba(245,245,240,0.07)',
-          fontFamily: 'var(--font-mono)',
+          fontFamily: 'var(--font-body), sans-serif',
           fontSize: 10,
           color: 'rgba(245,245,240,0.5)',
           letterSpacing: '0.04em',
