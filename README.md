@@ -1,6 +1,6 @@
-# Landing Page Project
+﻿# Landing Page Project
 
-Cloned and restructured from iironiicmedia.com.
+Cloned and restructured from veridion.ph.
 
 ## Project Structure
 
