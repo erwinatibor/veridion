@@ -62,14 +62,14 @@ export default function Header({ onContactOpen }) {
         <span>LIVE</span>
         <span style={{ color: 'rgba(245,245,240,0.2)' }}>·</span>
         <span>VRD-INDEX v1.2</span>
-        <span style={{ color: 'rgba(245,245,240,0.2)' }}>·</span>
-        <span>
+        <span className="ticker-scancount" style={{ color: 'rgba(245,245,240,0.2)' }}>·</span>
+        <span className="ticker-scancount">
           <span style={{ color: '#F5F5F0', fontVariantNumeric: 'tabular-nums' }}>
             {scanCount.toLocaleString()}
           </span>{' '}businesses scanned today
         </span>
-        <span style={{ color: 'rgba(245,245,240,0.2)' }}>·</span>
-        <span>
+        <span className="ticker-time" style={{ color: 'rgba(245,245,240,0.2)' }}>·</span>
+        <span className="ticker-time">
           Manila{' '}
           <span style={{ color: '#F5F5F0', fontVariantNumeric: 'tabular-nums' }}>{clock}</span>{' '}PHT
         </span>

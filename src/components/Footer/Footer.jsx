@@ -4,6 +4,7 @@ export default function Footer({ onContactOpen }) {
 
       {/* Main footer body */}
       <div
+        className="footer-grid"
         style={{
           maxWidth: 1400,
           margin: '0 auto',

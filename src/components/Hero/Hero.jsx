@@ -127,6 +127,7 @@ export default function Hero({ onContactOpen }) {
 
       {/* Main two-column content */}
       <div
+        className="hero-grid"
         style={{
           flex: 1,
           display: 'grid',

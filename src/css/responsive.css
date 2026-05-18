@@ -1,0 +1,52 @@
+/* ─────────────────────────────────────────────
+   Responsive overrides
+   tablet ≤ 900px  |  mobile ≤ 640px
+───────────────────────────────────────────── */
+
+/* ── Tablet & below ── */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem !important;
+  }
+
+  .modal-inner {
+    grid-template-columns: 1fr !important;
+    max-width: 420px !important;
+  }
+
+  .modal-decorative {
+    display: none !important;
+  }
+
+  .services-title {
+    max-width: 90% !important;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .hero-grid {
+    padding-top: 116px !important;
+    gap: 1.5rem !important;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  .ticker-scancount,
+  .ticker-time {
+    display: none !important;
+  }
+}

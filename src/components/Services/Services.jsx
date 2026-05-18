@@ -144,6 +144,7 @@ export default function Services() {
             )}
 
             <h2
+              className="services-title"
               style={{
                 fontSize: 'clamp(2.8rem, 7.5vw, 9rem)',
                 fontWeight: 800,
