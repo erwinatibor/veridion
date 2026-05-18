@@ -19,7 +19,7 @@ const team = [
     desc: 'Owns: hosting, DNS, staging environment, tech infrastructure',
   },
   {
-    img:      'https://lh3.googleusercontent.com/d/16G9mGr63ADEn66cSWzUHn72HWtVYXEfa',
+    img:      'https://lh3.googleusercontent.com/d/13QOi-TmU520yHzkKGsUN4CLcrj_D3dOF',
     modalImg: 'https://lh3.googleusercontent.com/d/1V7M4Hmlk-Yso8qFaoqnithP_C6v3RKNQ',
     name: 'Ihna Grace Simon',
     role: 'Co-Founder',
@@ -27,7 +27,7 @@ const team = [
     desc: 'Owns: HR, team onboarding, document control, internal comms',
   },
   {
-    img:      'https://lh3.googleusercontent.com/d/1exzJ_m9c_J8zCz4IpPcFv7Q_BeTevC6P',
+    img:      'https://lh3.googleusercontent.com/d/1OiPe1VbFDgCV4c3RNWwna7KJUyLrJt4Z',
     modalImg: 'https://lh3.googleusercontent.com/d/1FJAFWpV8iXRRWa5AkKXJOkwsPjMgTMU1',
     name: 'Sweet Marielle May Bunuan',
     role: 'Co-Founder',
